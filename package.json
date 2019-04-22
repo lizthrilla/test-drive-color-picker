@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "color-picker",
+  "homepage": "https://color-picker-elizabethtiller.netlify.com",
+  "scripts": {
+    "deploy": "netlify deploy --prod --dir=public",
+    "postdeploy": "echo 'Your site was deployed to https://color-picker-elizabethtiller.netlify.com'",
+    "start": "browser-sync start --server public --files public"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.4",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
+  }
+}
