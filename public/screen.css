@@ -9,4 +9,18 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.swatch {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+form h6 {
+  text-align: center;
 }
