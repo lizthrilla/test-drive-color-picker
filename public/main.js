@@ -1,15 +1,17 @@
 let hue = 170
 let sat = 100
-let light = 55
+let light = `55%`
+let alpha = 1
 
-const colorChange = () => {
-  document.querySelector('.colorName').textContent = getHSL()
-  const swatch = document.querySelector('.swatch')
-  swatch.style.backgroundColor = getHSL()
-  document.querySelector('.satcolor').style.backgroundColor = getHSL()
-}
 const getHSL = () => {
-  return `hsla(${hue}, ${sat}%, ${light}%`
+  return `hsla(${hue}, ${sat}%, ${light}, ${alpha})`
+}
+
+const setColor = () => {
+  document.querySelector('.colorName').textContent = getHSL()
+  const swatch = document.querySelector('div.swatch')
+  swatch.style.backgroundColor = getHSL()
+  // document.querySelector('.satcolor').style.backgroundColor = getHSL()
 }
 
 const main = () => {
@@ -17,21 +19,21 @@ const main = () => {
   hueInput.addEventListener('input', () => {
     hue = hueInput.value
     console.log(getHSL())
-    colorChange()
+    setColor()
   })
 
   const satInput = document.querySelector('input[name=sat]')
   satInput.addEventListener('input', () => {
     sat = satInput.value
     console.log(getHSL())
-    colorChange()
+    setColor()
   })
 
   const lightInput = document.querySelector('input[name=light]')
   lightInput.addEventListener('input', () => {
     light = lightInput.value
     console.log(getHSL())
-    colorChange()
+    setColor()
   })
 
   // const alphaInput = document.querySelector('input[name=alpha]')
@@ -41,7 +43,7 @@ const main = () => {
   //   colorChange()
   // })
 
-  colorChange()
+  setColor()
 }
 
 document.addEventListener('DOMContentLoaded', main)
