@@ -19,6 +19,7 @@ div.swatch {
   height: 200px;
   width: 200px;
   border: 1px solid black;
+  background-color: hsl(170, 55%, 55%, 0.5)
 }
 
 form h6 {
